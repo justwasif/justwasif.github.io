@@ -168,7 +168,7 @@ async function mountAgents() {
     console.error('agent runtime failed to mount', error);
     if (status) {
       status.textContent =
-        'The agent layer could not start. The courtroom below still works: the agents need a model key to speak, but the case and the ballot do not.';
+        'Agent layer error: ' + (error && error.message ? error.message : String(error)) + ' — the courtroom below still works.';
       status.classList.add('agent-status--error');
     }
   } finally {
