@@ -43,7 +43,7 @@
   },
   "actions": {
     "version": 1,
-    "module": "./actions/court-actions.js?v=10",
+    "module": "./actions/court-actions.js?v=11",
     "agentTools": [
       "get_case_state",
       "submit_exhibit",
