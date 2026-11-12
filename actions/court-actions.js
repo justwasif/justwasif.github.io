@@ -195,11 +195,11 @@ export function createActionHandlers(host) {
 
   return ACTIONS.map((action) => ({
     name: action.name,
-    purpose: action.purpose,
+    description: action.purpose,
     effect: action.effect,
     inputSchema: action.inputSchema,
     outputSchema: action.outputSchema,
-    handler: async (args) => {
+    execute: async (args) => {
       // The runtime validates against inputSchema; we validate again because a
       // schema bug must not be able to corrupt game state.
       const input = args && typeof args === 'object' ? args : {};
